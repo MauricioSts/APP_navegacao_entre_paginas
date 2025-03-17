@@ -1,16 +1,25 @@
-# navegacao
+# O que foi estudado: 
 
-A new Flutter project.
+## Navigator
+Quando o botão for pressionado o usuario é redirecionado para a prox pagina
+`              onPressed: () {
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => Paginasecundaria()),
+                 );
+               },`
 
-## Getting Started
+## Compartilhando dados entre paginas: 
+Na pagina secundaria, é necessesario informar o que vai ser recebido da pagina raiz
 
-This project is a starting point for a Flutter application.
+`   String valor;`
+ ` Paginasecundaria(this.valor);`
 
-A few resources to get you started if this is your first Flutter project:
+Já na pagina principal informa o que vai ser enviado para a secundaria 
+` MaterialPageRoute(builder: (context) => Paginasecundaria("Maureco")),`
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Na pagina secundaria: 
+`widget.valor` exibe as informaçoes 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+ 

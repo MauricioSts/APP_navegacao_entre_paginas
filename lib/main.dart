@@ -2,7 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:navegacao/PaginaSecundaria.dart';
 
 void main() {
-  runApp(MaterialApp(home: TelaPrincipal()));
+  runApp(MaterialApp(
+    home: TelaPrincipal(),
+    initialRoute: "/",
+    routes: {
+      "/secundaria": (context) => PaginaSecundaria(),
+    },
+  ));
 }
 
 class TelaPrincipal extends StatefulWidget {
@@ -25,12 +31,12 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
           children: [
             TextButton(
               onPressed: () {
-                Navigator.push(
+                Navigator.pushNamed(
                   context,
-                  MaterialPageRoute(builder: (context) => Paginasecundaria("Maureco")),
+                  "/secundaria", // Chama a página secundária
                 );
               },
-              child: Text("Ir para proxima pagina"),
+              child: Text("Ir para próxima página"),
               style: TextButton.styleFrom(backgroundColor: Colors.tealAccent),
             ),
           ],

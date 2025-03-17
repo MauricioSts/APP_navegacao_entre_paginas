@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 class Paginasecundaria extends StatefulWidget {
   
   
-  Paginasecundaria(this.valor);
 
-  String valor;
 
   @override
   State<Paginasecundaria> createState() => _PaginasecundariaState();
@@ -20,7 +18,7 @@ class _PaginasecundariaState extends State<Paginasecundaria> {
         title: Text("Tela principal"),
       ),
       body: Container(
-        child: Column(children: [Text("pagina secundariaaaaaa" + widget.valor)]),
+        child: Column(children: [Text("pagina secundariaaaaaa" )]),
       ),
     );
   }

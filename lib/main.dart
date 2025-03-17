@@ -27,7 +27,7 @@ class _TelaPrincipalState extends State<TelaPrincipal> {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Paginasecundaria()),
+                  MaterialPageRoute(builder: (context) => Paginasecundaria("Maureco")),
                 );
               },
               child: Text("Ir para proxima pagina"),
